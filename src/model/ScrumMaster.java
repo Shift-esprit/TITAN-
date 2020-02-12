@@ -1,6 +1,10 @@
 
 package model;
 
-public class ScrumMaster {
+public class ScrumMaster extends User{
+    
+    public ScrumMaster(){
+        super();
+    }
     
 }

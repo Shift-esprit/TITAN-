@@ -48,7 +48,7 @@
                            </font>
                         </JFXButton>
                  
-                        <JFXButton layoutX="346.0" layoutY="290.0" text="Register" />
+                        <JFXButton layoutX="346.0" onAction="#signUP"  layoutY="290.0" text="Register" />
                         <ImageView fitHeight="82.0" fitWidth="118.0" layoutX="164.0" layoutY="32.0">
                            <image>
                               <Image url="@login-icon-39414.png" />
@@ -65,7 +65,7 @@
                               <Font name="Playball" size="20" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" prefHeight="32.0" prefWidth="425.0" text="SCRUM APPLICATION" textAlignment="CENTER" textFill="WHITE">
+                        <Label alignment="CENTER" prefHeight="32.0" prefWidth="425.0" text="SCRUM APPLICATION  Login" textAlignment="CENTER" textFill="WHITE">
                            <font >
                               <Font name="Playball" size="25"  />
                               
