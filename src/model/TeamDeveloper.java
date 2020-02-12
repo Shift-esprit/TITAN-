@@ -1,6 +1,6 @@
 
 package model;
 
-public class TeamDeveloper {
-    
+public class TeamDeveloper extends User{
+    super();
 }
