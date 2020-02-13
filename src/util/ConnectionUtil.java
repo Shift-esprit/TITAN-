@@ -9,7 +9,7 @@ public class ConnectionUtil {
         try
         {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/scrum","root","root");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/scrum","root","");
             return conn;
         }
         catch(Exception e)
