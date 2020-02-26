@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="welcome_page" stylesheets="@main.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.clientController">
+   <children>
+      <HBox prefHeight="47.0" prefWidth="800.0" styleClass="welcome_page" AnchorPane.bottomAnchor="553.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane layoutY="47.0" prefHeight="557.0" prefWidth="799.0" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="47.0">
+         <children>
+            <SplitPane layoutX="132.0" layoutY="56.0" prefHeight="557.0" prefWidth="799.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="727.0" prefWidth="846.0">
+                     <children>
+                        <Pane prefHeight="684.0" prefWidth="846.0" styleClass="welcome_page" AnchorPane.bottomAnchor="83.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ScrollPane layoutY="62.0" prefHeight="202.0" prefViewportHeight="403.0" prefViewportWidth="629.0" prefWidth="541.0">
+                                 <content>
+                                    <TextArea fx:id="textAreaFieldDisplayMessage" layoutY="67.0" prefHeight="188.0" prefWidth="528.0" wrapText="true" />
+                                 </content>
+                              </ScrollPane>
+                              <TextField fx:id="textMessageField" layoutX="4.0" layoutY="407.0" onKeyPressed="#sentMessageFromTextField" prefHeight="58.0" prefWidth="631.0" />
+                              <Button fx:id="sentMessageBtn" layoutX="645.0" layoutY="413.0" mnemonicParsing="false" onAction="#sentMessagetServer" prefHeight="47.0" prefWidth="147.0" styleClass="menuBar" stylesheets="@main.css" text="Send Message">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnDisconnectFromServer" layoutX="507.0" layoutY="15.0" mnemonicParsing="false" onAction="#disconnectServer" prefHeight="38.0" prefWidth="136.0" stylesheets="@main.css" text="Disconnect ">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnConnectServer" layoutX="319.0" layoutY="15.0" mnemonicParsing="false" onAction="#connectToServer" prefHeight="38.0" prefWidth="147.0" styleClass="menuBar" stylesheets="@main.css" text="Connect to Server">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true" />
+                                 </graphic>
+                              </Button>
+                              <TextField fx:id="portNumberField" layoutX="567.0" layoutY="100.0" prefHeight="38.0" prefWidth="189.0" />
+                              <Label layoutX="599.0" layoutY="69.0" prefHeight="38.0" prefWidth="136.0" text="    Port Number" />
+                              <TextField fx:id="serverAddressField" layoutX="567.0" layoutY="210.0" prefHeight="38.0" prefWidth="189.0" />
+                              <Label layoutX="613.0" layoutY="163.0" prefHeight="38.0" prefWidth="136.0" text="   Server Address" />
+                              <Label fx:id="userNameLabel" layoutX="6.0" layoutY="10.0" prefHeight="47.0" prefWidth="299.0" text="          Welcome  To chatroom" />
+                              <TextArea fx:id="eventClientTextArea" editable="false" layoutY="274.0" prefHeight="120.0" prefWidth="618.0" />
+                              <TextArea fx:id="userListPanelClient" editable="false" layoutX="667.0" layoutY="358.0" prefHeight="266.0" prefWidth="176.0" visible="false" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>
